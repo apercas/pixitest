@@ -2,11 +2,37 @@
 <html>
 <head>
 	<title>pixitest</title>
+	<style type="text/css">
+		html,body {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
 </head>
 <body>
 <script src="http://pixijs.download/v4.3.3/pixi.min.js"></script>
 <script type="text/javascript">
 	console.log(PIXI);
+	//Create the renderer
+	var renderer = PIXI.autoDetectRenderer(256, 256);
+
+	//Add the canvas to the HTML document
+	document.body.appendChild(renderer.view);
+
+	//Create a container object called the `stage`
+	var stage = new PIXI.Container();
+
+	//Tell the `renderer` to `render` the `stage`
+	renderer.render(stage);
+
+	renderer.view.style.border = "1px dashed black";
+	renderer.view.backgroundColor = #061639;
+
+	// renderer.view.style.position = "absolute";
+	// renderer.view.style.display = "block";
+	// renderer.autoResize = true;
+	// renderer.resize(window.innerWidth, window.innerHeight);
+
 </script>
 </body>
 </html>
