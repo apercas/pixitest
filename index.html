@@ -105,8 +105,12 @@
 	}
 	function play() {
 	  //Use the cat's velocity to make it move
-	  cat.x += cat.vx;
-	  cat.y += cat.vy
+	  if (cat.x + cat.vx > 0 && cat.x + cat.vx < 256 - 64) {
+	  	cat.x += cat.vx;
+	  }
+	  if (cat.y + cat.vy > 0 && cat.y + cat.vy < 256 - 64) {
+	  	cat.y += cat.vy;
+	  }
 	}
 	//The `keyboard` helper function
 	function keyboard(keyCode) {
